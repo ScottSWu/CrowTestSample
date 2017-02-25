@@ -5,6 +5,7 @@
 #include <string>
 #include <vector>
 #include <iostream>
+#include <assert.h>
 
 // ----------------------------------------------------------------------------
 // qs_parse (modified)
