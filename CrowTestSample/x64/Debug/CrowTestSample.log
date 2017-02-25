@@ -1,0 +1,49 @@
+﻿  CrowTestSample.cpp
+c:\users\laura\documents\github\crowtestsample\crowtestsample\crowtestsample.cpp(3): warning C4005: '_CRT_SECURE_NO_WARNINGS': macro redefinition
+  c:\users\laura\documents\github\crowtestsample\crowtestsample\crowtestsample.cpp(3): note: command-line arguments:  see previous definition of '_CRT_SECURE_NO_WARNINGS'
+c:\users\laura\documents\github\crowtestsample\crowtestsample\crowtestsample.cpp(4): warning C4005: '_SCL_SECURE_NO_WARNINGS': macro redefinition
+  c:\users\laura\documents\github\crowtestsample\crowtestsample\crowtestsample.cpp(4): note: command-line arguments:  see previous definition of '_SCL_SECURE_NO_WARNINGS'
+c:\users\laura\documents\github\crowtestsample\crowtestsample\crowtestsample.cpp(3): warning C4603: '_CRT_SECURE_NO_WARNINGS': macro is not defined or definition is different after precompiled header use
+  c:\users\laura\documents\github\crowtestsample\crowtestsample\crowtestsample.cpp(3): note: Add macro to precompiled header instead of defining here
+  c:\users\laura\documents\github\crowtestsample\crowtestsample\crowtestsample.cpp(6): note: use of precompiled header
+c:\users\laura\documents\github\crowtestsample\crowtestsample\crowtestsample.cpp(4): warning C4603: '_SCL_SECURE_NO_WARNINGS': macro is not defined or definition is different after precompiled header use
+  c:\users\laura\documents\github\crowtestsample\crowtestsample\crowtestsample.cpp(4): note: Add macro to precompiled header instead of defining here
+  c:\users\laura\documents\github\crowtestsample\crowtestsample\crowtestsample.cpp(6): note: use of precompiled header
+c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(113): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(315): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(328): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(2770): warning C4244: '=': conversion from '__int64' to 'uint16_t', possible loss of data
+c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(2777): warning C4244: '=': conversion from '__int64' to 'uint16_t', possible loss of data
+c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(2784): warning C4244: '=': conversion from '__int64' to 'uint16_t', possible loss of data
+c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(2793): warning C4244: '=': conversion from '__int64' to 'uint16_t', possible loss of data
+c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(2886): warning C4244: '=': conversion from '__int64' to 'uint16_t', possible loss of data
+c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(4454): warning C4267: 'argument': conversion from 'size_t' to 'uint32_t', possible loss of data
+c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(4685): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(4902): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(4921): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(4923): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(4997): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(5121): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(5130): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(5189): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(5276): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(5583): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(7257): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(8035): warning C4244: 'argument': conversion from '__int64' to 'unsigned int', possible loss of data
+c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(8053): warning C4244: 'argument': conversion from '__int64' to 'unsigned int', possible loss of data
+c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(8071): warning C4244: 'argument': conversion from '__int64' to 'unsigned int', possible loss of data
+c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(8090): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(8103): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(8116): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(8158): warning C4267: '+=': conversion from 'size_t' to 'unsigned int', possible loss of data
+c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(8240): warning C4267: 'return': conversion from 'size_t' to 'unsigned int', possible loss of data
+c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(8276): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+c:\users\laura\documents\github\crowtestsample\crowtestsample\crowtestsample.cpp(24): warning C4003: not enough actual parameters for macro 'CROW_ROUTE'
+c:\users\laura\documents\github\crowtestsample\crowtestsample\crowtestsample.cpp(24): error C2059: syntax error: '...'
+c:\users\laura\documents\github\crowtestsample\crowtestsample\crowtestsample.cpp(25): error C2143: syntax error: missing ';' before '{'
+c:\users\laura\documents\github\crowtestsample\crowtestsample\crowtestsample.cpp(26): error C2059: syntax error: '...'
+c:\users\laura\documents\github\crowtestsample\crowtestsample\crowtestsample.cpp(27): error C3536: 'response': cannot be used before it is initialized
+c:\users\laura\documents\github\crowtestsample\crowtestsample\crowtestsample.cpp(27): error C2228: left of '.set_header' must have class/struct/union
+  c:\users\laura\documents\github\crowtestsample\crowtestsample\crowtestsample.cpp(27): note: type is 'int'
+c:\users\laura\documents\github\crowtestsample\crowtestsample\crowtestsample.cpp(30): error C2059: syntax error: ')'
+c:\users\laura\documents\github\crowtestsample\crowtestsample\crowtestsample.cpp(36): error C2059: syntax error: '...'

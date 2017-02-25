@@ -1,0 +1,33 @@
+﻿  stdafx.cpp
+  CrowTestSample.cpp
+c:\users\laura\documents\github\crowtestsample\crowtestsample\crowtestsample.cpp(3): warning C4005: '_CRT_SECURE_NO_WARNINGS': macro redefinition
+  c:\users\laura\documents\github\crowtestsample\crowtestsample\crowtestsample.cpp(3): note: command-line arguments:  see previous definition of '_CRT_SECURE_NO_WARNINGS'
+c:\users\laura\documents\github\crowtestsample\crowtestsample\crowtestsample.cpp(4): warning C4005: '_SCL_SECURE_NO_WARNINGS': macro redefinition
+  c:\users\laura\documents\github\crowtestsample\crowtestsample\crowtestsample.cpp(4): note: command-line arguments:  see previous definition of '_SCL_SECURE_NO_WARNINGS'
+c:\users\laura\documents\github\crowtestsample\crowtestsample\crowtestsample.cpp(3): warning C4603: '_CRT_SECURE_NO_WARNINGS': macro is not defined or definition is different after precompiled header use
+  c:\users\laura\documents\github\crowtestsample\crowtestsample\crowtestsample.cpp(3): note: Add macro to precompiled header instead of defining here
+  c:\users\laura\documents\github\crowtestsample\crowtestsample\crowtestsample.cpp(6): note: use of precompiled header
+c:\users\laura\documents\github\crowtestsample\crowtestsample\crowtestsample.cpp(4): warning C4603: '_SCL_SECURE_NO_WARNINGS': macro is not defined or definition is different after precompiled header use
+  c:\users\laura\documents\github\crowtestsample\crowtestsample\crowtestsample.cpp(4): note: Add macro to precompiled header instead of defining here
+  c:\users\laura\documents\github\crowtestsample\crowtestsample\crowtestsample.cpp(6): note: use of precompiled header
+c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(6531): warning C4267: '+=': conversion from 'size_t' to 'char', possible loss of data
+  c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(6526): note: while compiling class template member function 'std::string crow::websocket::Connection<crow::SocketAdaptor>::build_header(int,std::size_t)'
+  c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(6516): note: see reference to function template instantiation 'std::string crow::websocket::Connection<crow::SocketAdaptor>::build_header(int,std::size_t)' being compiled
+  c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(7666): note: see reference to class template instantiation 'crow::websocket::Connection<crow::SocketAdaptor>' being compiled
+c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(6543): warning C4293: '>>': shift count negative or too big, undefined behavior
+c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(6705): warning C4244: '=': conversion from 'uint64_t' to 'std::size_t', possible loss of data
+  c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(6566): note: while compiling class template member function 'void crow::websocket::Connection<crow::SocketAdaptor>::do_read(void)'
+  c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(6562): note: see reference to function template instantiation 'void crow::websocket::Connection<crow::SocketAdaptor>::do_read(void)' being compiled
+c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(6737): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+  c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(6736): note: while compiling class template member function 'bool crow::websocket::Connection<crow::SocketAdaptor>::is_FIN(void)'
+  c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(6756): note: see reference to function template instantiation 'bool crow::websocket::Connection<crow::SocketAdaptor>::is_FIN(void)' being compiled
+c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(6479): warning C4267: '+=': conversion from 'size_t' to 'char', possible loss of data
+  c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(6476): note: while compiling class template member function 'void crow::websocket::Connection<crow::SocketAdaptor>::send_pong(const std::string &)'
+  c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(6810): note: see reference to function template instantiation 'void crow::websocket::Connection<crow::SocketAdaptor>::send_pong(const std::string &)' being compiled
+CrowTestSample.obj : error LNK2019: unresolved external symbol "class boost::system::error_category const & __cdecl boost::system::system_category(void)" (?system_category@system@boost@@YAABVerror_category@12@XZ) referenced in function "public: __thiscall boost::system::error_code::error_code(void)" (??0error_code@system@boost@@QAE@XZ)
+CrowTestSample.obj : error LNK2019: unresolved external symbol "class boost::system::error_category const & __cdecl boost::system::generic_category(void)" (?generic_category@system@boost@@YAABVerror_category@12@XZ) referenced in function "void __cdecl boost::system::`dynamic initializer for 'errno_ecat''(void)" (??__Eerrno_ecat@system@boost@@YAXXZ)
+C:\lib\boost_1_63_0\lib64-msvc-14.0\boost_system-vc140-mt-gd-1_63.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'X86'
+C:\lib\boost_1_63_0\lib64-msvc-14.0\libboost_system-vc140-mt-gd-1_63.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'X86'
+C:\lib\boost_1_63_0\lib64-msvc-14.0\libboost_date_time-vc140-mt-gd-1_63.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'X86'
+C:\lib\boost_1_63_0\lib64-msvc-14.0\libboost_regex-vc140-mt-gd-1_63.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'X86'
+C:\Users\laura\Documents\GitHub\CrowTestSample\Debug\CrowTestSample.exe : fatal error LNK1120: 2 unresolved externals
