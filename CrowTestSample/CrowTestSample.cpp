@@ -40,13 +40,9 @@ struct Middleware
 	}
 };
 
-int main(){
-	
-	crow::App<Middleware> app;
-	app.get_middleware<Middleware>().setMessage("hello");
-
+std::string readIn(std::string fileName) {
 	{
-		std::ifstream file("bee.png", std::ios::in | std::ios::binary | std::ios::ate);
+		std::ifstream file(fileName, std::ios::in | std::ios::binary | std::ios::ate);
 		if (!file.is_open())
 			throw std::runtime_error("couldn't open");
 
@@ -56,20 +52,22 @@ int main(){
 		if (!file.read(&fileContents[0], fileContents.size()))
 			throw std::runtime_error("failed to read");
 	}
+	return std::string(fileContents.data(), fileContents.size());
+}
+
+int main(){
 	
+	crow::App<Middleware> app;
+	app.get_middleware<Middleware>().setMessage("hello");
+	std::string fileName = "Text.txt";
+	std::string fileNameS = "/" + fileName;
+	std::cout << fileNameS;
 	
 	crow::mustache::set_base(".");
-
-	CROW_ROUTE(app, "/").name("hello")([]() {
-		return "hi";
-	});
-
-	CROW_ROUTE(app, "/path/")  ([]() {
-		return "Trailing slash test case..";
-	});
-
-	CROW_ROUTE(app, "/bee.png") ([]() {
-		return std::string(fileContents.data(), fileContents.size());
+	
+	CROW_ROUTE(app, "/<string>") ([](const crow::request& req, crow::response& res, std::string str) {
+		res.write(readIn(str));
+		res.end();
 	});
 
 	app.port(18080).multithreaded().run();

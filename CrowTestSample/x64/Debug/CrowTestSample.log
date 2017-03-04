@@ -65,8 +65,8 @@ c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(9023): 
   c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(9279): note: see reference to function template instantiation 'void crow::Server<crow::Crow<Middleware>,crow::SocketAdaptor,Middleware>::do_accept(void)' being compiled
   c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(9473): note: see reference to class template instantiation 'crow::Server<crow::Crow<Middleware>,crow::SocketAdaptor,Middleware>' being compiled
   c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(9461): note: while compiling class template member function 'void crow::Crow<Middleware>::run(void)'
-  c:\users\laura\documents\github\crowtestsample\crowtestsample\crowtestsample.cpp(75): note: see reference to function template instantiation 'void crow::Crow<Middleware>::run(void)' being compiled
-  c:\users\laura\documents\github\crowtestsample\crowtestsample\crowtestsample.cpp(45): note: see reference to class template instantiation 'crow::Crow<Middleware>' being compiled
+  c:\users\laura\documents\github\crowtestsample\crowtestsample\crowtestsample.cpp(81): note: see reference to function template instantiation 'void crow::Crow<Middleware>::run(void)' being compiled
+  c:\users\laura\documents\github\crowtestsample\crowtestsample\crowtestsample.cpp(60): note: see reference to class template instantiation 'crow::Crow<Middleware>' being compiled
 c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(6738): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
   c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(6737): note: while compiling class template member function 'bool crow::websocket::Connection<crow::SocketAdaptor>::is_FIN(void)'
   c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(6757): note: see reference to function template instantiation 'bool crow::websocket::Connection<crow::SocketAdaptor>::is_FIN(void)' being compiled
