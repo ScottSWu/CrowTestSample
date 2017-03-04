@@ -43,30 +43,30 @@ c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(6532): 
   c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(6517): note: see reference to function template instantiation 'std::string crow::websocket::Connection<crow::SocketAdaptor>::build_header(int,std::size_t)' being compiled
   c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(7667): note: see reference to class template instantiation 'crow::websocket::Connection<crow::SocketAdaptor>' being compiled
 c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(9023): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-  c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(8980): note: while compiling class template member function 'void crow::Connection<Adaptor,Handler>::do_read(void)'
+  c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(8980): note: while compiling class template member function 'void crow::Connection<Adaptor,Handler,Middleware>::do_read(void)'
           with
           [
               Adaptor=crow::SocketAdaptor,
-              Handler=crow::Crow<>
+              Handler=crow::Crow<Middleware>
           ]
-  c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(8750): note: see reference to function template instantiation 'void crow::Connection<Adaptor,Handler>::do_read(void)' being compiled
+  c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(8750): note: see reference to function template instantiation 'void crow::Connection<Adaptor,Handler,Middleware>::do_read(void)' being compiled
           with
           [
               Adaptor=crow::SocketAdaptor,
-              Handler=crow::Crow<>
+              Handler=crow::Crow<Middleware>
           ]
-  c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(9307): note: see reference to class template instantiation 'crow::Connection<Adaptor,Handler>' being compiled
+  c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(9307): note: see reference to class template instantiation 'crow::Connection<Adaptor,Handler,Middleware>' being compiled
           with
           [
               Adaptor=crow::SocketAdaptor,
-              Handler=crow::Crow<>
+              Handler=crow::Crow<Middleware>
           ]
-  c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(9305): note: while compiling class template member function 'void crow::Server<crow::Crow<>,crow::SocketAdaptor>::do_accept(void)'
-  c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(9279): note: see reference to function template instantiation 'void crow::Server<crow::Crow<>,crow::SocketAdaptor>::do_accept(void)' being compiled
-  c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(9473): note: see reference to class template instantiation 'crow::Server<crow::Crow<>,crow::SocketAdaptor>' being compiled
-  c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(9461): note: while compiling class template member function 'void crow::Crow<>::run(void)'
-  c:\users\laura\documents\github\crowtestsample\crowtestsample\crowtestsample.cpp(56): note: see reference to function template instantiation 'void crow::Crow<>::run(void)' being compiled
-  c:\users\laura\documents\github\crowtestsample\crowtestsample\crowtestsample.cpp(16): note: see reference to class template instantiation 'crow::Crow<>' being compiled
+  c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(9305): note: while compiling class template member function 'void crow::Server<crow::Crow<Middleware>,crow::SocketAdaptor,Middleware>::do_accept(void)'
+  c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(9279): note: see reference to function template instantiation 'void crow::Server<crow::Crow<Middleware>,crow::SocketAdaptor,Middleware>::do_accept(void)' being compiled
+  c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(9473): note: see reference to class template instantiation 'crow::Server<crow::Crow<Middleware>,crow::SocketAdaptor,Middleware>' being compiled
+  c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(9461): note: while compiling class template member function 'void crow::Crow<Middleware>::run(void)'
+  c:\users\laura\documents\github\crowtestsample\crowtestsample\crowtestsample.cpp(75): note: see reference to function template instantiation 'void crow::Crow<Middleware>::run(void)' being compiled
+  c:\users\laura\documents\github\crowtestsample\crowtestsample\crowtestsample.cpp(45): note: see reference to class template instantiation 'crow::Crow<Middleware>' being compiled
 c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(6738): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
   c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(6737): note: while compiling class template member function 'bool crow::websocket::Connection<crow::SocketAdaptor>::is_FIN(void)'
   c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(6757): note: see reference to function template instantiation 'bool crow::websocket::Connection<crow::SocketAdaptor>::is_FIN(void)' being compiled
@@ -74,23 +74,23 @@ c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(6480): 
   c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(6477): note: while compiling class template member function 'void crow::websocket::Connection<crow::SocketAdaptor>::send_pong(const std::string &)'
   c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(6811): note: see reference to function template instantiation 'void crow::websocket::Connection<crow::SocketAdaptor>::send_pong(const std::string &)' being compiled
 c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(7007): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(6995): note: while compiling class template member function 'bool crow::HTTPParser<crow::Connection<Adaptor,Handler>>::feed(const char *,int)'
+  c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(6995): note: while compiling class template member function 'bool crow::HTTPParser<crow::Connection<Adaptor,Handler,Middleware>>::feed(const char *,int)'
           with
           [
               Adaptor=crow::SocketAdaptor,
-              Handler=crow::Crow<>
+              Handler=crow::Crow<Middleware>
           ]
-  c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(8989): note: see reference to function template instantiation 'bool crow::HTTPParser<crow::Connection<Adaptor,Handler>>::feed(const char *,int)' being compiled
+  c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(8989): note: see reference to function template instantiation 'bool crow::HTTPParser<crow::Connection<Adaptor,Handler,Middleware>>::feed(const char *,int)' being compiled
           with
           [
               Adaptor=crow::SocketAdaptor,
-              Handler=crow::Crow<>
+              Handler=crow::Crow<Middleware>
           ]
-  c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(9090): note: see reference to class template instantiation 'crow::HTTPParser<crow::Connection<Adaptor,Handler>>' being compiled
+  c:\users\laura\documents\github\crowtestsample\crowtestsample\crow_all.h(9090): note: see reference to class template instantiation 'crow::HTTPParser<crow::Connection<Adaptor,Handler,Middleware>>' being compiled
           with
           [
               Adaptor=crow::SocketAdaptor,
-              Handler=crow::Crow<>
+              Handler=crow::Crow<Middleware>
           ]
 c:\program files (x86)\microsoft visual studio 14.0\vc\include\xmemory0(737): warning C4244: 'initializing': conversion from 'unsigned __int64' to 'int', possible loss of data
   c:\program files (x86)\microsoft visual studio 14.0\vc\include\xmemory0(857): note: see reference to function template instantiation 'void std::allocator<_Ty>::construct<_Objty,unsigned __int64>(_Objty *,unsigned __int64 &&)' being compiled

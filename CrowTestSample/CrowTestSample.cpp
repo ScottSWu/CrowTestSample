@@ -7,59 +7,73 @@
 #include "crow_all.h"
 #include <iostream>
 #include <fstream>
+#include <vector>
 
-std::string content;
+std::vector< char > fileContents;
 
-
-int main()
+struct Middleware
 {
-	crow::SimpleApp app;
+	std::string message;
 
-	CROW_ROUTE(app, "/")([]() {
-		return "Hello world";
-	});
-
-	/*
-	void get_file_contents_async(..., std::function<void(const std::string&)> on_ready)
+	Middleware()
 	{
-		std::string file_contents;
-		...
-			if (is_ready == true && on_ready != nullptr)
-				on_ready(file_contents);
+		message = " ";
 	}
-	*/
 
+	void setMessage(std::string newMsg)
+	{
+		message = newMsg;
+	}
 
-	CROW_ROUTE(app, "/file").methods("POST"_method)([] (const crow::request& req) {
-		
+	struct context
+	{
+	};
 
-		if (req.method == "POST"_method)
-		{
-			auto x = crow::json::load(req.body);
-			content = "You have submitted a POST request";
-			return crow::response(200, content);
-		}
-		//auto response = crow::response(400);
-		//response.set_header("Content-Type", "application/octet-stream"); // or set to whatever you need
+	void before_handle(crow::request& /*req*/, crow::response& /*res*/, context& /*ctx*/)
+	{
+		CROW_LOG_DEBUG << " - MESSAGE: " << message;
+	}
 
-		return crow::response(0, "error");
+	void after_handle(crow::request& /*req*/, crow::response& /*res*/, context& /*ctx*/)
+	{
+		// no-op
+	}
+};
+
+int main(){
+	
+	crow::App<Middleware> app;
+	app.get_middleware<Middleware>().setMessage("hello");
+
+	{
+		std::ifstream file("bee.png", std::ios::in | std::ios::binary | std::ios::ate);
+		if (!file.is_open())
+			throw std::runtime_error("couldn't open");
+
+		fileContents.resize(file.tellg());
+
+		file.seekg(0, std::ios::beg);
+		if (!file.read(&fileContents[0], fileContents.size()))
+			throw std::runtime_error("failed to read");
+	}
+	
+	
+	crow::mustache::set_base(".");
+
+	CROW_ROUTE(app, "/").name("hello")([]() {
+		return "hi";
 	});
 
-	CROW_ROUTE(app, "/json")
-		([] {
-		std::string x;
-		//crow::json::wvalue x;
-		x = "<h1> hello</h1><br/><h3> world</h3><img src='~/bee.PNG'>";
-		return x;
+	CROW_ROUTE(app, "/path/")  ([]() {
+		return "Trailing slash test case..";
+	});
+
+	CROW_ROUTE(app, "/bee.png") ([]() {
+		return std::string(fileContents.data(), fileContents.size());
 	});
 
 	app.port(18080).multithreaded().run();
 }
-/* std::string const get_file_contents(...)
-{
-	...
-		return file_contents;
-} */
 
 
 
