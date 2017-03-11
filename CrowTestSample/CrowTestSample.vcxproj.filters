@@ -43,5 +43,8 @@
     <None Include="HTMLPage.htm">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="manual.htm">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>
