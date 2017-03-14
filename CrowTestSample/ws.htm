@@ -14,6 +14,7 @@
             Send
         </button><BR>
     <div id="img"></div>
+    <div id="show" align="center"></div>
         <script>
           
            
@@ -58,36 +59,23 @@
 
                 // Make a Blob from the bytes
                 var blob = new Blob([byteArray], { type: 'image/png' });
-                console.log(blob);
 
                 // Use createObjectURL to make a URL for the blob
                 var image = new Image();
                 image.src = URL.createObjectURL(blob);
-                document.body.appendChild(image);
-                /*
-                console.log(byteArray);
-
-                var canvas = document.createElement('canvas');
-                canvas.width = imageWidth;
-                canvas.height = imageHeight;
-                var ctx = canvas.getContext('2d');
-
-                var imageData = ctx.getImageData(0, 0, imageWidth, imageHeight); // total size: imageWidth * imageHeight * 4; color format BGRA
-                var dataLen = imageData.data.length;
-                for (var i = 0; i < dataLen; i++) {
-                    imageData.data[i] = byteArray[i];
-                }
-                ctx.putImageData(imageData, 0, 0);
-
-                // create a new element and add it to div
-                var image = document.createElement('img');
-                image.width = imageWidth;
-                image.height = imageHeight;
-                image.src = canvas.toDataURL();
-
-                var div = document.getElementById('img');
-                div.appendChild(image); */
+                document.body.appendChild(image);                
             }
+
+            $(document).ready(
+            function () {
+                setInterval(function () {
+                    var randomnumber = Math.floor(Math.random() * 100);
+                    $('#show').text(
+                            'I am getting refreshed every 3 seconds..! Random Number ==> '
+                                    + randomnumber);
+                }, 3000);
+            });
+
         </script>
 
 
