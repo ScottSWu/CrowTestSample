@@ -41,7 +41,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
@@ -166,8 +166,22 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="bee.png" />
+    <Image Include="images\1.JPG" />
+    <Image Include="images\2.JPG" />
+    <Image Include="images\3.JPG" />
+    <Image Include="images\4.JPG" />
+    <Image Include="images\5.JPG" />
+    <Image Include="images\6.JPG" />
+    <Image Include="images\7.JPG" />
+    <Image Include="images\8.JPG" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="camera.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="database.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
     <None Include="main.htm">
       <DeploymentContent>true</DeploymentContent>
     </None>
@@ -175,6 +189,9 @@
       <DeploymentContent>true</DeploymentContent>
     </None>
     <None Include="HTMLPage.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="ws.htm">
       <DeploymentContent>true</DeploymentContent>
     </None>
   </ItemGroup>

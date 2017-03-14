@@ -38,6 +38,30 @@
     <Image Include="bee.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="images\1.JPG">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\2.JPG">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\3.JPG">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\4.JPG">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\5.JPG">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\6.JPG">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\7.JPG">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\8.JPG">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <None Include="HTMLPage.htm">
@@ -47,6 +71,15 @@
       <Filter>Resource Files</Filter>
     </None>
     <None Include="main.htm">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="database.htm">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="ws.htm">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="camera.htm">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>

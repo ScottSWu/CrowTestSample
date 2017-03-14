@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+</head>
+<body>
+  <!-- <div id="list">
+        <p>
+            <iframe src="Text.txt" frameborder="0" height="100"
+                    width="95%"></iframe>
+        </p> -->
+        <input id="msg" type="text"></input>
+        <button id="send">
+            Send
+        </button><BR>
+        <textarea id="log" cols=100 rows=50>
+    </textarea>
+    <div id="img"></div>
+        <script>
+          
+           
+            var sock = new WebSocket("ws://localhost:18080/ws");
+            sock.binaryType = "arraybuffer";
+            sock.onopen = () => {
+                console.log('open')
+            }
+            sock.onerror = (e) => {
+                console.log('error', e)
+            }
+            sock.onclose = () => {
+                console.log('close')
+            }
+
+            sock.onmessage = function (e) {
+                if (e.data) {
+                    drawImage(e.data);
+                }
+            }
+             $("#msg").keypress(function (e) {
+                      if (e.which == 13) {
+                          sock.send($("#msg").val());
+                          $("#msg").val("");
+                      }
+                  });  
+            $("#send").click(() => {
+                sock.send($("#msg").val());
+                $("#msg").val("");
+            });
+            function drawImage(data) {
+
+                console.log(data);
+                var image = document.createElement('bee.png');
+                image.src = 'data:image/png;base64,' + base64Data;
+                var array = new Uint8Array(),base64Data = btoa(String.fromCharCode.apply(null, array));
+
+                var imageWidth = 73, imageHeight = 73; // hardcoded width & height. 
+              //  var byteArray = new Uint8Array(image);
+                console.log(array);
+
+                var canvas = document.createElement('canvas');
+                canvas.width = imageWidth;
+                canvas.height = imageHeight;
+                var ctx = canvas.getContext('2d');
+
+                var imageData = ctx.getImageData(0, 0, imageWidth, imageHeight); // total size: imageWidth * imageHeight * 4; color format BGRA
+                var dataLen = imageData.data.length;
+                for (var i = 0; i < dataLen; i++) {
+                    imageData.data[i] = array[i];
+                }
+                ctx.putImageData(imageData, 0, 0);
+
+                // create a new element and add it to div
+                var image = document.createElement('img');
+                image.width = imageWidth;
+                image.height = imageHeight;
+                image.src = canvas.toDataURL();
+
+                var div = document.getElementById('img');
+                div.appendChild(image);
+            }
+        </script>
+
+
+
+</body>
+</html>
