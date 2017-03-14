@@ -166,6 +166,7 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="hie" />
+    <Image Include="images\0.JPG" />
     <Image Include="images\1.JPG" />
     <Image Include="images\2.JPG" />
     <Image Include="images\3.JPG" />

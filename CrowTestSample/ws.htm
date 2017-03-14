@@ -21,7 +21,11 @@
             var sock = new WebSocket("ws://localhost:18080/ws");
             sock.binaryType = "arraybuffer";
             sock.onopen = () => {
-                console.log('open')
+                console.log('open');
+
+                setInterval(function () {
+                    sock.send("");
+                }, 500);
             }
             sock.onerror = (e) => {
                 console.log('error', e)
@@ -51,7 +55,7 @@
             function drawImage(data) {
                 $(document).ready(
                  function () {
-                    setInterval(function () {
+                    //setInterval(function () {
                     var randomnumber = Math.floor(Math.random() * 100);
                      $('#show').text(
                               'I am getting refreshed every 3 seconds..! Random Number ==> '
@@ -64,15 +68,19 @@
                      }
 
                         // Make a Blob from the bytes
-                     var blob = new Blob([byteArray], { type: 'image/png' });
+                     var blob = new Blob([byteArray], { type: 'image/jpeg' });
 
                         // Use createObjectURL to make a URL for the blob
                      var image = new Image();
                      image.src = URL.createObjectURL(blob);
-                     $('#imgs').children('img').attr('src', image.src);
+                     $('#imgs').children('img').attr({
+                         'src': image.src,
+                         'width': 800,
+                         'height': 600
+                     });
                     // document.body.appendChild(image);
-                 }, 3000);
-          });
+                    //}, 500);
+                 });
                  console.log(data);             
             }
 

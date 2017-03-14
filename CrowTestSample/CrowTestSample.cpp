@@ -107,6 +107,8 @@ int main(){
 	
 	//crow::mustache::set_base(".");
 
+	int index = 0;
+
 	CROW_ROUTE(app, "/ws")
 		.websocket()
 		.onopen([&](crow::websocket::connection& conn) {
@@ -129,8 +131,10 @@ int main(){
 				std::cout << "hello";
 			}
 			else {
-				u->send_binary(readIn("bee.png"));
-				std::cout << "bee.png" << std::endl;
+				std::string file = std::to_string(index) + ".JPG";
+				u->send_binary(readIn(file));
+				std::cout << file << std::endl;
+				index = (index + 1) % 8;
 				//std::cout << data;
 			}
 	});
