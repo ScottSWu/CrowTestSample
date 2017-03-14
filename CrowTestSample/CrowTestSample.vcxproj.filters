@@ -35,9 +35,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="bee.png">
-      <Filter>Resource Files</Filter>
-    </Image>
     <Image Include="images\1.JPG">
       <Filter>Resource Files</Filter>
     </Image>
@@ -59,7 +56,10 @@
     <Image Include="images\7.JPG">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="images\8.JPG">
+    <Image Include="hie">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\bee.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

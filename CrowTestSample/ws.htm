@@ -13,7 +13,7 @@
         <button id="send">
             Send
         </button><BR>
-    <div id="img"></div>
+    <div id="imgs"><img src="" /></div>
     <div id="show" align="center"></div>
         <script>
           
@@ -35,6 +35,9 @@
                     drawImage(e.data);
                 }
             }
+         /*   sock.addEventListener('update', function () {
+                            }, false); */
+
              $("#msg").keypress(function (e) {
                       if (e.which == 13) {
                           sock.send($("#msg").val());
@@ -46,35 +49,34 @@
                 $("#msg").val("");
             });
             function drawImage(data) {
+                $(document).ready(
+                 function () {
+                    setInterval(function () {
+                    var randomnumber = Math.floor(Math.random() * 100);
+                     $('#show').text(
+                              'I am getting refreshed every 3 seconds..! Random Number ==> '
+                                     + randomnumber);
+                     var imageWidth = 73, imageHeight = 73; // hardcoded width & height. 
+                     var byteArray = new Uint8Array(data);
+                     console.log(byteArray);
+                     for (var i = 0; i < data.length; i += 2) {
+                         byteArray[i / 2] = parseInt(data.substring(i, i + 2), /* base = */ 16);
+                     }
 
+                        // Make a Blob from the bytes
+                     var blob = new Blob([byteArray], { type: 'image/png' });
 
-                console.log(data);
-
-                var imageWidth = 73, imageHeight = 73; // hardcoded width & height. 
-                var byteArray = new Uint8Array(data);
-                console.log(byteArray);
-                for (var i = 0; i < data.length; i += 2) {
-                    byteArray[i / 2] = parseInt(data.substring(i, i + 2), /* base = */ 16);
-                }
-
-                // Make a Blob from the bytes
-                var blob = new Blob([byteArray], { type: 'image/png' });
-
-                // Use createObjectURL to make a URL for the blob
-                var image = new Image();
-                image.src = URL.createObjectURL(blob);
-                document.body.appendChild(image);                
+                        // Use createObjectURL to make a URL for the blob
+                     var image = new Image();
+                     image.src = URL.createObjectURL(blob);
+                     $('#imgs').children('img').attr('src', image.src);
+                    // document.body.appendChild(image);
+                 }, 3000);
+          });
+                 console.log(data);             
             }
 
-            $(document).ready(
-            function () {
-                setInterval(function () {
-                    var randomnumber = Math.floor(Math.random() * 100);
-                    $('#show').text(
-                            'I am getting refreshed every 3 seconds..! Random Number ==> '
-                                    + randomnumber);
-                }, 3000);
-            });
+          
 
         </script>
 

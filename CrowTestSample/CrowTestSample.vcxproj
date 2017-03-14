@@ -165,7 +165,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="bee.png" />
+    <Image Include="hie" />
     <Image Include="images\1.JPG" />
     <Image Include="images\2.JPG" />
     <Image Include="images\3.JPG" />
@@ -173,7 +173,7 @@
     <Image Include="images\5.JPG" />
     <Image Include="images\6.JPG" />
     <Image Include="images\7.JPG" />
-    <Image Include="images\8.JPG" />
+    <Image Include="images\bee.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="camera.htm">
