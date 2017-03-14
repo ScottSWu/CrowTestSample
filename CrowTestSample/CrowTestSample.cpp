@@ -129,7 +129,7 @@ int main(){
 				std::cout << "hello";
 			}
 			else {
-				u->send_text("bee.png");
+				u->send_binary(readIn("bee.png"));
 				std::cout << "bee.png" << std::endl;
 				//std::cout << data;
 			}

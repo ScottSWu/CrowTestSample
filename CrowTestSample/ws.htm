@@ -13,8 +13,6 @@
         <button id="send">
             Send
         </button><BR>
-        <textarea id="log" cols=100 rows=50>
-    </textarea>
     <div id="img"></div>
         <script>
           
@@ -48,14 +46,26 @@
             });
             function drawImage(data) {
 
+
                 console.log(data);
-                var image = document.createElement('bee.png');
-                image.src = 'data:image/png;base64,' + base64Data;
-                var array = new Uint8Array(),base64Data = btoa(String.fromCharCode.apply(null, array));
 
                 var imageWidth = 73, imageHeight = 73; // hardcoded width & height. 
-              //  var byteArray = new Uint8Array(image);
-                console.log(array);
+                var byteArray = new Uint8Array(data);
+                console.log(byteArray);
+                for (var i = 0; i < data.length; i += 2) {
+                    byteArray[i / 2] = parseInt(data.substring(i, i + 2), /* base = */ 16);
+                }
+
+                // Make a Blob from the bytes
+                var blob = new Blob([byteArray], { type: 'image/png' });
+                console.log(blob);
+
+                // Use createObjectURL to make a URL for the blob
+                var image = new Image();
+                image.src = URL.createObjectURL(blob);
+                document.body.appendChild(image);
+                /*
+                console.log(byteArray);
 
                 var canvas = document.createElement('canvas');
                 canvas.width = imageWidth;
@@ -65,7 +75,7 @@
                 var imageData = ctx.getImageData(0, 0, imageWidth, imageHeight); // total size: imageWidth * imageHeight * 4; color format BGRA
                 var dataLen = imageData.data.length;
                 for (var i = 0; i < dataLen; i++) {
-                    imageData.data[i] = array[i];
+                    imageData.data[i] = byteArray[i];
                 }
                 ctx.putImageData(imageData, 0, 0);
 
@@ -76,7 +86,7 @@
                 image.src = canvas.toDataURL();
 
                 var div = document.getElementById('img');
-                div.appendChild(image);
+                div.appendChild(image); */
             }
         </script>
 
